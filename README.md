@@ -1,5 +1,5 @@
-Simple, fast, quantum-proof, 768-bit signatures
-===============================================
+Quantum-proof, 768-bit signatures for 1-bit messages
+====================================================
 
 Introduction
 ------------
