@@ -29,11 +29,19 @@ amount payload, it'd still be smaller. In a way, it can be
 seen as a streamed version of Lamport's scheme, optimized
 to sign very, very small messages.
 
+Another potential application would a DApp which demanded
+many small transactions per second. You can encode the 
+current state of a NES controller with just 8 bits, so, 
+LSign could allow you to perform a transaction in an 
+hypothetical decentralized game with 768 bytes, and a
+verification time 1000x faster than ECDSA.
+
 In short, the main insight is that LSign doesn't sign the hash
-of the message. Instead, it signs the message directly, and it is 
-very efficient when the message is really small (say, 1-16 bits).
-As the message grows, so does the signature size, reaching parity 
-with Lamport signatures on payloads larger than 86 bits.
+of the message. Instead, it signs the message directly, and is,
+thus, very efficient for niche applications where the message 
+is really small (say, 1-16 bits). As the message grows, so does
+the signature size, reaching parity with Lamport signatures on
+payloads larger than 86 bits.
 
 API
 ---
