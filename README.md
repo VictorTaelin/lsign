@@ -22,12 +22,10 @@ optimize the payload by 1. storing a list of 16 favorite
 contacts (say, stores) and products (up to 16), then we
 could make a payment with as few as 8 "useful bits". This
 results in a 768-byte transaction, which is just 2x the
-average Bitcoin transaction size, yet orders of magnitude
-faster and quantum proof. That corresponds to 9% of the size
-of a Lamport signature. Even with a 64-bit address and
-amount payload, it'd still be smaller. In a way, it can be
-seen as a streamed version of Lamport's scheme, optimized
-to sign very, very small messages.
+average Bitcoin transaction size, or 9% of the size
+of a Lamport signature. In a way, it can be seen as a
+streamed version of Lamport's scheme, optimized to sign 
+very, very small messages.
 
 Another potential application would a DApp which demanded
 many small transactions per second. You can encode the 
