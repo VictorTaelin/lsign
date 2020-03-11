@@ -29,6 +29,13 @@ amount payload, it'd still be smaller. In a way, it can be
 seen as a streamed version of Lamport's scheme, optimized
 to sign very, very small messages.
 
+In short, the main insight is that LSign doesn't hash the
+message before signing. Instead, it signs the message directly,
+assuming it is really small (say, 1-16 bits), and it is really
+efficient in those cases. The signature size increases linearly
+with message size, reaching parity with Lamport signatures on 
+payloads larger than 86 bits.
+
 API
 ---
 
@@ -101,13 +108,6 @@ averaging 768 bits of signature per bit signed.
 The third is that both the payload and the sender address
 are recoverable from the signature, so you don't need to
 send them separately.
-
-In short, the main catch is that LSign doesn't hash the
-message before signing, assuming it is smaller than a hash.
-This allows us to perform very cheap signatures in cases
-where the payloads are minuscle (say, 1-16 bits). This
-increases linearly, reaching parity with Lamport signatures
-on payloads larger than 86 bits.
 
 Disclaimer
 ----------
