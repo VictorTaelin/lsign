@@ -1,0 +1,25 @@
+{
+  "name": "lsign",
+  "version": "0.1.0",
+  "description": "Simple, fast and small quantum-proof signatures",
+  "main": "lsign.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maiavictor/lsign.git"
+  },
+  "keywords": [
+    "signature",
+    "crypto",
+    "blockchain",
+    "hash"
+  ],
+  "author": "Victor Maia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maiavictor/lsign/issues"
+  },
+  "homepage": "https://github.com/maiavictor/lsign#readme"
+}
