@@ -32,9 +32,9 @@ to sign very, very small messages.
 Another potential application would a DApp which demanded
 many small transactions per second. You can encode the 
 current state of a NES controller with just 8 bits, so, 
-LSign could allow you to perform a transaction in an 
-hypothetical decentralized game with 768 bytes, and a
-verification time 1000x faster than ECDSA.
+LSign could allow you to implement an hypothetical 
+decentralized game with just 768 bytes, and signature
+and verification times 1000x faster than ECDSA.
 
 In short, the main insight is that LSign doesn't sign the hash
 of the message. Instead, it signs the message directly, and is,
